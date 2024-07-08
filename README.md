@@ -2,12 +2,13 @@
     <h1 class="text-3xl font-semibold text-green-500">
         Project PetDad - A Comprehensive IoT Solution for PetCare
     </h1>
-    <div>
-        Revolutionize pet care with Project PetDad, an advanced IoT solution combining state-of-the-art hardware and intelligent software. Ensure your pets' well-being with seamless monitoring and management capabilities.
-    </div>
     <div align="center"> 
     <img  src="./petdad-logo.JPG" alt="Logo"/>
     </div>
+    <div>
+        Revolutionize pet care with Project PetDad, an advanced IoT solution combining state-of-the-art hardware and intelligent software. Ensure your pets' well-being with seamless monitoring and management capabilities.
+    </div>
+    <img src="./homepage.jpg" alt="Hompage screenshot">
 </header>
 
 <section>
