@@ -30,11 +30,10 @@
     },
   });
 
-  const route = (name) => {
-    return '#'; // Replace with actual routing logic
-  };
-
   const isCurrentRoute = (routeName) => {
-    return false; // Replace with actual current route logic
+    if(routeName == route().current()){
+        return true;
+    }
+    return false;
   };
   </script>

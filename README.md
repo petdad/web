@@ -26,6 +26,17 @@
     <img src="./readme assets/register.jpg" alt="Register screenshot">
 </section>
 
+
+
+<section>
+    <h2>Add Pets</h2>
+    <p class="text-gray-600 leading-relaxed">
+    Add every pets profile in this system that will help you track pets states, assign them to different data modules and many more
+    </p>
+    <img src="./readme assets/pets-index.jpg" alt="Pets screenshot">
+        <img src="./readme assets/pets-create.jpg" alt="Pets screenshot">
+</section>
+
 <section>
     <h2>Manage Pet Spaces, Profiles, and Vaccination Records</h2>
     <p class="text-gray-600 leading-relaxed">

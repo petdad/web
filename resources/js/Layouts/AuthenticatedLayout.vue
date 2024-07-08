@@ -54,15 +54,14 @@
 </template>
 
 <script setup>
-import NavLink from '@/Components/NavLink.vue';
 import Sidebar from '@/Components/Sidebar.vue';
 
 const sidebarItems = [
   { text: 'Dashboard', routeName: 'dashboard', iconName: 'ppd-dashboard' },
-  { text: 'Pets', routeName: 'dashboard', iconName: 'ppd-pet' },
-  { text: 'Controllers', routeName: 'dashboard', iconName: 'ppd-controller' },
-  { text: 'Devices', routeName: 'dashboard', iconName: 'ppd-device' },
+  { text: 'Pets', routeName: 'pets.index', iconName: 'ppd-pet' },
   { text: 'Pet Space', routeName: 'spaces.index', iconName: 'ppd-space' },
+  { text: 'Controllers', routeName: 'controllers.index', iconName: 'ppd-controller' },
+  { text: 'Devices', routeName: 'devices.index', iconName: 'ppd-device' },
   { text: 'Vets', routeName: 'vets.index', iconName: 'ppd-doc' },
 ];
 </script>

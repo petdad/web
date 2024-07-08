@@ -17,7 +17,7 @@ class CreateSpacesTable extends Migration
 
         Schema::create('pets', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('space_id')->constrained()->onDelete('cascade');
+            $table->bigInteger('space_id')->nullable();
             $table->string('breed');
             $table->string('name');
             $table->string('species'); // Adding the species column

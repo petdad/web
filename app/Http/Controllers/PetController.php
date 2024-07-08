@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
-use App\Models\Space;
+use App\Models\Pet;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -12,29 +12,29 @@ use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class SpaceController extends Controller
+class PetController extends Controller
 {
     /**
      * Display the user's profile form.
      */
     public function index(Request $request): Response
     {
-        return Inertia::render('Space/Index',[
-            'total_pet_space' => Space::count(),
-            'total_active_pet_space' => Space::where('is_active', true)->count(),
-            'spaces' => Space::with(['pets', 'controllers.devices'])->latest()->get()
+        return Inertia::render('Pets/Index',[
+            "total_pets" => Pet::count(),
+            "total_pets_vaccinated" => Pet::where('vaccinated', true)->count(),
+            "pets" => Pet::all()
         ]);
     }
 
     public function create(Request $request): Response
     {
-        return Inertia::render('Space/Create',[
+        return Inertia::render('Pets/Create',[
         ]);
     }
 
     public function store(Request $request)
     {
-        Space::create($request->post());
+        Pet::create($request->post());
     }
 
     public function edit(Request $request): Response

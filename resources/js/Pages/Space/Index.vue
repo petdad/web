@@ -1,41 +1,51 @@
-<template>
-    <AuthenticatedLayout>
-        <SpaceList :spaces="spaces.data" default-display='none'/>
-        <div class="flex space-x-2 mx-5 justify-center">
-
-    <button v-if="previousLink.url"
-            :class="{ 'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded': !previousLink.active, 'bg-gray-300 text-gray-600 px-4 py-2 rounded cursor-not-allowed': previousLink.active }">
-      <div v-html="previousLink.label"></div>
-    </button>
-
-    <button v-for="link in spaces.links"
-            :key="link.label"
-            :class="{ 'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded': link.active, 'bg-gray-300 text-gray-600 px-4 py-2 rounded cursor-not-allowed': !link.active }"
-            @click="navigateTo(link.url)">
-        <div v-html="link.label"></div>
-    </button>
-
-    <!-- Next button -->
-    <button v-if="nextLink.url"
-            :class="{ 'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded': !nextLink.active, 'bg-gray-300 text-gray-600 px-4 py-2 rounded cursor-not-allowed': nextLink.active }">
-        <div v-html="nextLink.label"></div>
-    </button>
-  </div>
-    </AuthenticatedLayout>
-</template>
 <script setup>
-import SpaceList from "@/Components/SpaceList.vue";
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import SpaceList from '@/Components/SpaceList.vue';
+import { Head, Link } from '@inertiajs/vue3';
 
 const props = defineProps({
-    spaces: Array
+    total_pet_space: Number,
+    total_active_pet_space: Number,
+    spaces:Array
 });
 
-const navigateTo = (url) => {
-  console.log("Navigating to", url);
-};
-
-const previousLink = props.spaces.links.find(link => link.label === "&laquo; Previous");
-const nextLink = props.spaces.links.find(link => link.label === "Next &raquo;");
-
 </script>
+
+<template>
+    <Head title="Dashboard" />
+
+    <AuthenticatedLayout>
+        <div class="">
+            <div class="max-w-full sm:px-6 lg:px-8">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4"
+                >
+                    <!-- Statistic Cards -->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                            Total Pet Space
+                        </h2>
+                        <p class="text-3xl font-bold text-gray-900">
+                            {{ total_pet_space }}
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h2 class="text-lg font-semibold mb-2">
+                            🟢 Active Pet Space
+                        </h2>
+                        <p class="text-3xl font-bold text-blue-600">
+                            {{ total_active_pet_space }}
+                        </p>
+                    </div>
+                    <div class="p-4 flex flex-row">
+                        <span> ➕ </span>
+                        <Link :href="route('spaces.create')">
+                            Create Space
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            <SpaceList :spaces="spaces" default-display='block'/>
+        </div>
+    </AuthenticatedLayout>
+</template>
