@@ -20,15 +20,15 @@
 
             <div :id="'space_card_'+index" class="p-1" :class="defaultDisplay">
                 <div class="flex flex-col md:flex-row gap-1">
-                    <div class="bg-white text-black p-2 w-full">Pets:
-                        <span v-for="pet in space?.pets">
-                            {{ pet.name }}
-                        </span>
-                        <span v-if="space?.pets?.length < 1">
-                            No pets added to this space
-                        </span>
+                    <div class="bg-green-200 rounded-sm font-bold text-black p-2 w-full md:w-auto md:flex-grow"> <!-- Adjusted width for responsiveness -->
+                    Pets:
+                    <template v-if="space?.pets?.length > 0">
+                        <span v-for="(pet, index) in space.pets" :key="index" class="mr-1 font-bold">{{ pet.name }}</span>
+                    </template>
+                    <template v-else>
+                        <span>No pets added to this space</span>
+                    </template>
                     </div>
-
                 </div>
                 <SpaceDevices :space="space" />
             </div>

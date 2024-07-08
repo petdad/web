@@ -3,7 +3,7 @@
       <div class="text-sm">
         <div class="flex flex-row overflow-auto bg-green-100 text-black text-sm rounded-sm p-2 gap-x-2">
             <span class="bg-slate-500 text-white p-4" >
-                 {{ space?.controllers?.length }} Controllers
+                 {{ space?.controllers?.length }} Controller{{space?.controllers?.length == 1? '': 's'}}
             </span>
           <template v-for="controller in space?.controllers" :key="controller.id" class="device-status">
             <span v-for="device in controller.devices" :key="device.id" class="device-status">
