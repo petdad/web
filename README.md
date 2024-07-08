@@ -8,7 +8,7 @@
     <div>
         Revolutionize pet care with Project PetDad, an advanced IoT solution combining state-of-the-art hardware and intelligent software. Ensure your pets' well-being with seamless monitoring and management capabilities.
     </div>
-    <img src="./homepage.JPG" alt="Hompage screenshot">
+    <img src="./homepage.JPG" alt="Homepage screenshot">
 </header>
 
 <section>
@@ -25,7 +25,7 @@
     <p class="text-gray-600 leading-relaxed">
         Stay informed at a glance with our well-organized dashboard that provides comprehensive overviews of your pets' key metrics and activities. Monitor their daily routines, health trends, and environmental conditions effortlessly.
     </p>
-    <img src="./readme assets/dashboard.jpg" alt="Dashboard screenshot">
+    <img src="./readme assets/dashboard.JPG" alt="Dashboard screenshot">
 </section>
 
 <section>
