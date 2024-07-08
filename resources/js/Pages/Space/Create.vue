@@ -55,7 +55,7 @@
 
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { useForm } from '@inertiajs/vue3';
+import { router, useForm } from '@inertiajs/vue3';
 import { ref } from 'vue'; // Import ref from Vue 3 Composition API
 
 const space = useForm({
@@ -80,14 +80,10 @@ function removePet(index) {
 function submitForm() {
     // Assuming you have Axios installed, if not install it via npm or yarn
     space
-        .post(route('spaces.store'))
-        .then((response) => {
-            console.log('Form submitted successfully!', response.data);
-            // Handle success, e.g., show a success message
-        })
-        .catch((error) => {
-            console.error('Error submitting form:', error);
-            // Handle error, e.g., show an error message
+    .post(route('spaces.store'),{
+            onSuccess(){
+                router.get(route('spaces.index'))
+            }
         });
 }
 </script>
