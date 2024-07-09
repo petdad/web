@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 
 class CreateSpacesTable extends Migration
@@ -13,10 +14,12 @@ class CreateSpacesTable extends Migration
             $table->string('name');
             $table->boolean('is_active');
             $table->timestamps();
+            $table->bigInteger('user_id')->default(Auth::id() ?? 1);
         });
 
         Schema::create('pets', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->default(Auth::id() ?? 1);
             $table->bigInteger('space_id')->nullable();
             $table->string('breed');
             $table->string('name');
@@ -40,6 +43,7 @@ class CreateSpacesTable extends Migration
         });
 
         Schema::create('vaccine_logs', function (Blueprint $table) {
+            $table->bigInteger('user_id')->default(Auth::id() ?? 1);
             $table->id();
             $table->foreignId('pet_id')->constrained()->onDelete('cascade');
             $table->string('vaccine_name');
@@ -51,14 +55,17 @@ class CreateSpacesTable extends Migration
 
         Schema::create('controllers', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->default(Auth::id() ?? 1);
             $table->foreignId('space_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->text('description')->nullable();
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
 
         Schema::create('controller_devices', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->default(Auth::id() ?? 1);
             $table->foreignId('controller_id')->constrained()->onDelete('cascade');
             $table->string('device_name');
             $table->string('device_type');
@@ -68,6 +75,7 @@ class CreateSpacesTable extends Migration
 
         Schema::create('controller_network_adapters', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->default(Auth::id() ?? 1);
             $table->foreignId('controller_id')->constrained()->onDelete('cascade');
             $table->string('network_adapter_name');
             $table->string('ip_address');
