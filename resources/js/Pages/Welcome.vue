@@ -1,6 +1,6 @@
 <template>
     <div class="bg-gray-100 dark:bg-gray-900 min-h-screen">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-full mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Sidebar -->
                 <div class="md:col-span-1">
@@ -38,7 +38,16 @@
                                 </li>
                             </ul>
                         </nav>
-                        <Overview/>
+                        <video
+                            class="w-full max-h-[500px]"
+                            autoplay
+                            muted
+                            loop
+                        >
+                            <source src="https://petdad.juborajnaofel.xyz/PROJECT-PETDAD.mp4" type="video/mp4" />
+                            <!-- Add more source tags for different video formats -->
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
                 <!-- Main Content -->
@@ -48,11 +57,13 @@
                             <h1 class="text-3xl font-semibold text-green-500 dark:text-green-500 mb-4">
                                 Project PetDad
                             </h1>
+
                             <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
                                 Optimize Pet Care with an Integrated IoT System
                                 for Monitoring and Maintenance, combining robust
                                 hardware and intelligent software solutions.
                             </p>
+                            <NeedInvestor/>
                             <div class="mt-4">
                                 <img :src="hardwareImage" alt="Project" class="max-w-full h-auto" />
 
@@ -62,9 +73,7 @@
                 </div>
             </div>
 
-            <div>
 
-            </div>
             <!-- Footer -->
             <div class="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
                 © 2024 Project Pet Dad. All Rights Reserved.
@@ -77,6 +86,7 @@
 import { defineProps } from 'vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Overview from '@/Components/Overview.vue';
+import NeedInvestor from '@/Components/NeedInvestor.vue';
 defineProps({
     canLogin: Boolean,
     canRegister: Boolean,
