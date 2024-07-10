@@ -5,7 +5,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import Modal from '@/Components/Modal.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import { useForm } from '@inertiajs/vue3';
+import { useForm, usePage } from '@inertiajs/vue3';
 import { nextTick, ref } from 'vue';
 
 const confirmingUserDeletion = ref(false);
@@ -22,6 +22,12 @@ const confirmUserDeletion = () => {
 };
 
 const deleteUser = () => {
+    if(usePage().props.is_demo){
+        alert('Disabled for demo version, Contact for business query juborajnaofel@gmail.com');
+
+        return;
+    }
+
     form.delete(route('profile.destroy'), {
         preserveScroll: true,
         onSuccess: () => closeModal(),

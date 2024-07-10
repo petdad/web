@@ -27,6 +27,11 @@ const submit = () => {
         onFinish: () => form.reset('password'),
     });
 };
+
+const insertDemoCred = () => {
+    form.email = 'demo@petdad.juborajnaofel.xyz';
+    form.password = 'password';
+}
 </script>
 
 <template>
@@ -37,6 +42,27 @@ const submit = () => {
             {{ status }}
         </div>
 
+        <div v-if="$page.props.is_demo">
+            This is demo credential for this demo version:
+
+            <div class="overflow-x-auto my-2">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <tr>
+                        <td class="px-3 py-4 whitespace-nowrap border-b border-gray-200">Email: </td>
+                        <td class="px-3 py-4 whitespace-nowrap border-b border-gray-200">demo@petdad.juborajnaofel.xyz</td>
+                    </tr>
+                    <tr>
+                        <td class="px-3 py-4 whitespace-nowrap border-b border-gray-200">Password: </td>
+                        <td class="px-3 py-4 whitespace-nowrap border-b border-gray-200">password</td>
+                    </tr>
+                    <tr>
+                        <td class="px-3 py-4 whitespace-nowrap border-b border-gray-200" colspan="2">
+                            <button type="button" class="rounded-md bg-slate-700 text-white p-2" @click="insertDemoCred"> Insert in Form </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         <form @submit.prevent="submit" class="bg-green-500 rounded-lg p-6">
             <div>
                 <InputLabel for="email" value="Email" />

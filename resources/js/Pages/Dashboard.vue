@@ -2,6 +2,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import SpaceList from '@/Components/SpaceList.vue';
 import { Head } from '@inertiajs/vue3';
+import Overview from '@/Components/Overview.vue';
 
 const props = defineProps({
     total_pet_space: Number,
@@ -18,6 +19,7 @@ const props = defineProps({
 
     <AuthenticatedLayout>
         <div class="">
+            <Overview/>
             <div class="max-w-full sm:px-6 lg:px-8">
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4"

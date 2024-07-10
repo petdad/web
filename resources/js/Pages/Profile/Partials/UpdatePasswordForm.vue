@@ -3,7 +3,7 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import { useForm } from '@inertiajs/vue3';
+import { useForm, usePage } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
 const passwordInput = ref(null);
@@ -16,6 +16,11 @@ const form = useForm({
 });
 
 const updatePassword = () => {
+    if(usePage().props.is_demo){
+        alert('Disabled for demo version, Contact for business query juborajnaofel@gmail.com');
+
+        return;
+    }
     form.put(route('password.update'), {
         preserveScroll: true,
         onSuccess: () => form.reset(),

@@ -34,6 +34,7 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
+            'is_demo' => (bool) env('IS_DEMO', false)
         ];
     }
 }

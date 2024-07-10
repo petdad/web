@@ -103,7 +103,7 @@
 </template>
 
 <script setup>
-import { router, useForm } from '@inertiajs/vue3';
+import { router, useForm, usePage } from '@inertiajs/vue3';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
 const pet = useForm({
@@ -118,6 +118,12 @@ const pet = useForm({
 
 function submitForm() {
     // Assuming you have Axios installed, if not install it via npm or yarn
+    if(usePage().props.is_demo){
+        alert('Disabled for demo version, Contact for business query at email: juborajnaofel@gmail.com');
+
+        return;
+    }
+
     pet
         .post(route('pets.store'),{
             onSuccess(){

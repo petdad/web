@@ -31,12 +31,12 @@
                     </a>
 
                     <!-- Log Out Link -->
-                    <form action="logout" method="POST">
-                        <button type="submit"
+                    <div>
+                        <button type="button" @click="logoutHandle"
                             class="flex items-center text-sm text-gray-600 hover:text-gray-800 transition duration-150 ease-in-out">
                             Log Out
                         </button>
-                    </form>
+                    </div>
                 </nav>
             </div>
 
@@ -47,6 +47,7 @@
         <!-- Main Content -->
         <main class="overflow-auto">
             <div class="m-3">
+                <Alert v-if="$page.props.is_demo" :type="'warning'" :message="'Data is deleted everyday as it is a demo version. In demo Create, Update and Deletion is disabled!  Contact for business query at email:juborajnaofel@gmail.com'" @close="closeAlert" />
                 <slot />
             </div>
         </main>
@@ -55,6 +56,8 @@
 
 <script setup>
 import Sidebar from '@/Components/Sidebar.vue';
+import Alert from '@/Components/Alert.vue';
+import { router, useForm } from '@inertiajs/vue3';
 
 const sidebarItems = [
   { text: 'Dashboard', routeName: 'dashboard', iconName: 'ppd-dashboard' },
@@ -64,6 +67,11 @@ const sidebarItems = [
   { text: 'Devices', routeName: 'devices.index', iconName: 'ppd-device' },
   { text: 'Vets', routeName: 'vets.index', iconName: 'ppd-doc' },
 ];
+
+const logoutHandle = () => {
+    const form = useForm({});
+    form.post(route('logout'))
+}
 </script>
 
 <style scoped>

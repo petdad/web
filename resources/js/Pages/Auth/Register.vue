@@ -91,12 +91,15 @@ const submit = () => {
                     :href="route('login')"
                     class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                    Already registered?
+                    {{ !$page.props.is_demo?"Already registered":"Login with demo credentials" }}
                 </Link>
 
-                <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton class="ms-4"  v-if="!$page.props.is_demo" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Register
                 </PrimaryButton>
+            </div>
+            <div v-if="$page.props.is_demo" class="mb-4 font-medium text-sm text-blue-600">
+                THIS IS DEMO VERSION: REGISTRATION, RESET PASSWORD NOT ALLOWED. GOTO LOGIN PAGE TO LOGIN WITH DEMO CREDENTIALS
             </div>
         </form>
     </GuestLayout>

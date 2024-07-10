@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ControllerController;
+use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SpaceController;
@@ -44,8 +46,8 @@ Route::get('/dashboard', function () {
 Route::resource('/vets', VetController::class)->middleware(['auth', 'verified']);
 Route::resource('/pets', PetController::class)->middleware(['auth', 'verified']);
 Route::resource('/spaces', SpaceController::class)->middleware(['auth', 'verified']);
-Route::resource('/controllers', SpaceController::class)->middleware(['auth', 'verified']);
-Route::resource('/devices', SpaceController::class)->middleware(['auth', 'verified']);
+Route::resource('/controllers', ControllerController::class)->middleware(['auth', 'verified']);
+Route::resource('/devices', DeviceController::class)->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

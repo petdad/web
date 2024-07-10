@@ -51,10 +51,15 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.email" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+            <div v-if="!$page.props.is_demo" class="flex items-center justify-end mt-4">
+
+                <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="$page.props.is_demo || form.processing">
+
                     Email Password Reset Link
                 </PrimaryButton>
+            </div>
+            <div v-if="$page.props.is_demo" class="mb-4 font-medium text-sm text-blue-600">
+                THIS IS DEMO VERSION: REGISTRATION, RESET PASSWORD NOT ALLOWED. GOTO LOGIN PAGE TO LOGIN WITH DEMO CREDENTIALS
             </div>
         </form>
     </GuestLayout>

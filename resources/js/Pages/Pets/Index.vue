@@ -65,9 +65,9 @@ const props = defineProps({
             </template>
             <!-- Add more conditional fields as needed -->
 
-            <template v-if="pet.description">
+            <!-- <template v-if="pet.description">
                 <p class="text-gray-600 mb-2">Description: {{ pet.description }}</p>
-            </template>
+            </template> -->
             <template v-if="pet.microchipped === 1">
                 <p class="text-gray-600 mb-2">Microchipped: Yes</p>
             </template>

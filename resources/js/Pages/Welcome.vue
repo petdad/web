@@ -38,6 +38,7 @@
                                 </li>
                             </ul>
                         </nav>
+                        <Overview/>
                     </div>
                 </div>
                 <!-- Main Content -->
@@ -54,10 +55,15 @@
                             </p>
                             <div class="mt-4">
                                 <img :src="hardwareImage" alt="Project" class="max-w-full h-auto" />
+
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div>
+
             </div>
             <!-- Footer -->
             <div class="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
@@ -70,6 +76,7 @@
 <script setup>
 import { defineProps } from 'vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import Overview from '@/Components/Overview.vue';
 defineProps({
     canLogin: Boolean,
     canRegister: Boolean,

@@ -12,7 +12,7 @@
                 class="card-header bg-green-600 px-6 py-4 flex flex-row justify-between cursor-pointer"
                 @click="handelSpaceAccordion(index)"
             >
-                <span class="text-xl font-semibold">{{ space.name }}</span>
+                <span class="text-xl font-semibold capitalize">{{ space.name }}</span>
                 <span v-if="space.is_active" class="active-status"
                     >🟢 Active</span
                 >

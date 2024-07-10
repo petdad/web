@@ -21,16 +21,29 @@ class UsersTableSeeder extends Seeder
 
         // Generate dummy data using Faker
         $users = [];
-        $users[] = [
-            'name' => 'I.E.U. Juboraj Naofel',
-            'email' =>  'juborajnaofel@petdad.juborajnaofel.xyz',
-            'email_verified_at' => now(),
-            'password' => Hash::make('password'), // Default password 'password'
-            'remember_token' => Str::random(10),
-            'created_at' => now(),
-            'updated_at' => now(),
-        ];
-        
+        if(env('IS_DEMO', false)){
+            $users[] = [
+                'name' => 'DEMO',
+                'email' =>  'demo@petdad.juborajnaofel.xyz',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'), // Default password 'password'
+                'remember_token' => Str::random(10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+        }else{
+            $users[] = [
+                'name' => 'I.E.U. Juboraj Naofel',
+                'email' =>  'juborajnaofel@petdad.juborajnaofel.xyz',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password'), // Default password 'password'
+                'remember_token' => Str::random(10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ];
+        }
+
+
         for ($i = 0; $i < 10; $i++) { // Generate 10 users, you can adjust this number
             $users[] = [
                 'name' => $faker->name,
@@ -42,6 +55,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => now(),
             ];
         }
+
 
         // Insert data into the database
         DB::table('users')->insert($users);
