@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-full rounded overflow-hidden shadow-lg bg-white">
-        <!-- Project Section -->
+
         <div class="px-6 py-4">
             <div class="flex items-center mb-4">
                 <svg
@@ -8,13 +8,13 @@
                     :height="100"
                     viewBox="0 0 200 240"
                 >
-                    <!-- Background Circle -->
+
                     <circle cx="100" cy="100" r="90" fill="#34D399" />
 
-                    <!-- Head -->
+
                     <circle cx="100" cy="80" r="50" fill="#10B981" />
 
-                    <!-- Ears -->
+
                     <path
                         d="M75,60 Q65,40 55,60"
                         stroke="#065F46"
@@ -28,16 +28,16 @@
                         fill="none"
                     />
 
-                    <!-- Eyes -->
+
                     <circle cx="80" cy="75" r="8" fill="#065F46" />
                     <circle cx="120" cy="75" r="8" fill="#065F46" />
                     <circle cx="82" cy="73" r="3" fill="#FFF" />
                     <circle cx="118" cy="73" r="3" fill="#FFF" />
 
-                    <!-- Nose -->
+
                     <circle cx="100" cy="90" r="5" fill="#065F46" />
 
-                    <!-- Mouth -->
+
                     <path
                         d="M95,105 Q100,115 105,105"
                         stroke="#065F46"
@@ -45,10 +45,10 @@
                         fill="none"
                     />
 
-                    <!-- Body -->
+
                     <ellipse cx="100" cy="160" rx="70" ry="50" fill="#10B981" />
 
-                    <!-- Legs -->
+
                     <rect
                         x="60"
                         y="150"
@@ -64,7 +64,7 @@
                         fill="#065F46"
                     />
 
-                    <!-- Tail -->
+
                     <path
                         d="M150,160 Q170,140 180,160"
                         stroke="#065F46"
@@ -72,7 +72,7 @@
                         fill="none"
                     />
 
-                    <!-- Text "PetDad" -->
+
                     <text
                         x="50"
                         y="220"
@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        <!-- Contact Me Section -->
+
         <div class="px-6 py-4">
             <div class="flex items-center mb-4">
                 <img
@@ -132,5 +132,5 @@ export default {
 </script>
 
 <style scoped>
-/* Optional: You can add scoped styles for your card here */
+
 </style>

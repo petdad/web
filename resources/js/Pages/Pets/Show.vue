@@ -5,7 +5,7 @@
                 Pet Profile: {{pet.name}}
             </h2>
 
-            <!-- Breed -->
+            
             <div class="mb-4">
                 <label for="breed" class="block text-sm font-medium text-gray-700">Breed:</label>
                 <span
@@ -15,7 +15,7 @@
                 ></span>
             </div>
 
-            <!-- Species -->
+            
             <div class="mb-4">
                 <label for="species" class="block text-sm font-medium text-gray-700">Species:</label>
                 <span
@@ -25,7 +25,7 @@
                 ></span>
             </div>
 
-            <!-- Date of Birth -->
+            
             <div class="mb-4">
                 <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth:</label>
                 <span
@@ -35,7 +35,7 @@
                 ></span>
             </div>
 
-            <!-- Gender -->
+            
             <div class="mb-4">
                 <label for="gender" class="block text-sm font-medium text-gray-700">Gender:</label>
                 <span
@@ -45,7 +45,7 @@
                 ></span>
             </div>
 
-            <!-- Vaccinated -->
+            
             <div class="mb-4">
                 <label for="vaccinated" class="block text-sm font-medium text-gray-700">Vaccinated:</label>
                 <span
@@ -55,7 +55,7 @@
                 ></span>
             </div>
 
-            <!-- Description -->
+            
             <div class="mb-4">
                 <label for="description" class="block text-sm font-medium text-gray-700">Description:</label>
                 <span

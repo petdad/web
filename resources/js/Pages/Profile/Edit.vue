@@ -5,7 +5,7 @@
         <div class="py-6 px-4 lg:px-8">
             <div class="max-w-full">
                 <div class="bg-white shadow sm:rounded-lg">
-                    <!-- Tabs -->
+                    
                     <div class="flex">
                         <button
                             @click="activeTab = 'profile'"
@@ -29,9 +29,9 @@
                             Delete Account
                         </button>
                     </div>
-                    <!-- End Tabs -->
+                    
 
-                    <!-- Content based on active tab -->
+                    
                     <div class="p-2">
                         <div v-if="activeTab === 'profile'">
                             <UpdateProfileInformationForm
@@ -47,7 +47,7 @@
                             <DeleteUserForm />
                         </div>
                     </div>
-                    <!-- End Content based on active tab -->
+                    
                 </div>
             </div>
         </div>

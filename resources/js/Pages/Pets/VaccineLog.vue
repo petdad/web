@@ -46,7 +46,7 @@
         return;
     }
     props.vaccinationLogs.splice(index, 1);
-    // Assuming you want to delete from server too, you might use a delete method
+    
     useForm().delete(route('vaccination_logs.destroy', { id: index }));
   };
 

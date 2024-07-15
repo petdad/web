@@ -5,7 +5,7 @@
                 Add a Pet
             </h2>
 
-            <!-- Pet Name -->
+            
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
                 <input
@@ -17,7 +17,7 @@
                 />
             </div>
 
-            <!-- Breed -->
+            
             <div class="mb-4">
                 <label for="breed" class="block text-sm font-medium text-gray-700">Breed:</label>
                 <input
@@ -29,7 +29,7 @@
                 />
             </div>
 
-            <!-- Species -->
+            
             <div class="mb-4">
                 <label for="species" class="block text-sm font-medium text-gray-700">Species:</label>
                 <input
@@ -41,7 +41,7 @@
                 />
             </div>
 
-            <!-- Date of Birth -->
+            
             <div class="mb-4">
                 <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth:</label>
                 <input
@@ -53,7 +53,7 @@
                 />
             </div>
 
-            <!-- Gender -->
+            
             <div class="mb-4">
                 <label for="gender" class="block text-sm font-medium text-gray-700">Gender:</label>
                 <select
@@ -68,7 +68,7 @@
                 </select>
             </div>
 
-            <!-- Vaccinated -->
+            
             <div class="mb-4">
                 <label for="vaccinated" class="block text-sm font-medium text-gray-700">Vaccinated:</label>
                 <input
@@ -79,7 +79,7 @@
                 />
             </div>
 
-            <!-- Description -->
+            
             <div class="mb-4">
                 <label for="description" class="block text-sm font-medium text-gray-700">Description:</label>
                 <textarea
@@ -90,7 +90,7 @@
                 ></textarea>
             </div>
 
-            <!-- Submit Button -->
+            
             <button
                 type="submit"
                 class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 my-4"

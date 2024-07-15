@@ -20,7 +20,7 @@
 
             <div :id="'space_card_'+index" class="p-1" :class="defaultDisplay">
                 <div class="flex flex-col md:flex-row gap-1">
-                    <div class="bg-green-200 rounded-sm font-bold text-black p-2 w-full md:w-auto md:flex-grow"> <!-- Adjusted width for responsiveness -->
+                    <div class="bg-green-200 rounded-sm font-bold text-black p-2 w-full md:w-auto md:flex-grow">
                     Pets:
                     <template v-if="space?.pets?.length > 0">
                         <span v-for="(pet, index) in space.pets" :key="index" class="mr-1 font-bold">{{ pet.name }}</span>
@@ -42,7 +42,7 @@ import SpaceDevices from '@/Components/SpaceDevices.vue';
 import { space } from 'postcss/lib/list';
 
 const props = defineProps({
-    spaces: Array, // Assuming spaces is passed as a prop
+    spaces: Array,
     defaultDisplay: String
 });
 
@@ -57,17 +57,3 @@ function handelSpaceAccordion(index){
 }
 </script>
 
-<style scoped>
-.card {
-    /* Your card styles */
-}
-.card-header {
-    /* Header styles */
-}
-.active-status {
-    /* Styles for active status */
-}
-.gate-status {
-    /* Styles for gate status */
-}
-</style>

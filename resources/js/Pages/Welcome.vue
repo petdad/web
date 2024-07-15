@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gray-100 dark:bg-gray-900 min-h-screen">
         <div class="max-w-full mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <!-- Navigation Bar -->
+
             <div
                 class="fixed top-0 left-0 right-0 z-50 bg-green-500 dark:bg-blue-800 bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-lg p-4 flex justify-between items-center mb-8"
             >
@@ -27,7 +27,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-                <!-- Main Content -->
+
                 <div class="md:col-span-1">
                     <div
                         class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Sidebar -->
+
                 <div class="md:col-span-1">
                     <div
                         class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
@@ -77,7 +77,7 @@
                                 src="https://petdad.juborajnaofel.xyz/PROJECT-PETDAD.mp4"
                                 type="video/mp4"
                             />
-                            <!-- Add more source tags for different video formats -->
+
                             Your browser does not support the video tag.
                         </video>
                         <NeedInvestor />
@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <!-- Footer -->
+
             <div
                 class="mt-12 text-center text-sm text-gray-500 dark:text-gray-400"
             >
@@ -116,5 +116,5 @@ defineProps({
 </script>
 
 <style>
-/* Add your custom styles here */
+
 </style>

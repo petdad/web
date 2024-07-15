@@ -34,5 +34,5 @@
   </script>
 
   <style scoped>
-  /* No additional styles needed if using Tailwind for all classes */
+  
   </style>
