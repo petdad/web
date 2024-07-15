@@ -22,4 +22,9 @@ class Pet extends Model
     protected $casts = [
         'vaccinated' => 'boolean',
     ];
+
+    public function vaccinationLogs()
+    {
+        return $this->hasMany(VaccineLog::class);
+    }
 }

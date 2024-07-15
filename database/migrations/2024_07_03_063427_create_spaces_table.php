@@ -47,7 +47,7 @@ class CreateSpacesTable extends Migration
             $table->id();
             $table->foreignId('pet_id')->constrained()->onDelete('cascade');
             $table->string('vaccine_name');
-            $table->date('administered_at');
+            $table->date('administered_at')->nullable()->default(now());
             $table->string('veterinarian')->nullable();
             $table->text('notes')->nullable();
             $table->timestamps();

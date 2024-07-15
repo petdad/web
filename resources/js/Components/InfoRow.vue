@@ -10,6 +10,5 @@
   <script setup>
   import { defineProps } from 'vue';
 
-  // Destructure props directly within the setup
   const { label, value, index } = defineProps(['label', 'value', 'index']);
   </script>

@@ -46,7 +46,7 @@
                                 for Monitoring and Maintenance, combining robust
                                 hardware and intelligent software solutions.
                             </p>
-                            <NeedInvestor />
+
                             <div class="mt-4">
                                 <img
                                     :src="hardwareImage"
@@ -65,7 +65,7 @@
                         <h2
                             class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4"
                         >
-                            Navigation
+                            Overview Video
                         </h2>
                         <video
                             class="w-full max-h-[300px] md:max-h-[500px]"
@@ -80,6 +80,7 @@
                             <!-- Add more source tags for different video formats -->
                             Your browser does not support the video tag.
                         </video>
+                        <NeedInvestor />
                     </div>
                 </div>
             </div>

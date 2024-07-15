@@ -117,7 +117,6 @@ const pet = useForm({
 });
 
 function submitForm() {
-    // Assuming you have Axios installed, if not install it via npm or yarn
     if(usePage().props.is_demo){
         alert('Disabled for demo version, Contact for business query at email: juborajnaofel@gmail.com');
 
@@ -132,7 +131,3 @@ function submitForm() {
         })
 }
 </script>
-
-<style scoped>
-/* Add your custom styles here */
-</style>

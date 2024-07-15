@@ -5,9 +5,11 @@ use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SpaceController;
+use App\Http\Controllers\VaccinLogController;
 use App\Http\Controllers\VetController;
 use App\Models\Pet;
 use App\Models\Space;
+use App\Models\VaccineLog;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -45,6 +47,10 @@ Route::get('/dashboard', function () {
 
 Route::resource('/vets', VetController::class)->middleware(['auth', 'verified']);
 Route::resource('/pets', PetController::class)->middleware(['auth', 'verified']);
+
+Route::resource('/vaccinlogs', VaccinLogController::class)->middleware(['auth', 'verified']);
+
+
 Route::resource('/spaces', SpaceController::class)->middleware(['auth', 'verified']);
 Route::resource('/controllers', ControllerController::class)->middleware(['auth', 'verified']);
 Route::resource('/devices', DeviceController::class)->middleware(['auth', 'verified']);
