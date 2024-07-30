@@ -7,7 +7,7 @@
 
 
             <span>PDC IDENTIFICATION NUMBER</span> : <span class="font-bold bg-white rounded-md text-[blue]">{{ unique_id }}</span>
-            <!-- Name -->
+
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
                 <input
@@ -41,7 +41,7 @@
                 /> Activate?
             </div>
 
-            <!-- Description -->
+
             <div class="mb-4">
                 <label for="description" class="block text-sm font-medium text-gray-700">Description:</label>
                 <textarea
@@ -52,7 +52,7 @@
                 ></textarea>
             </div>
 
-            <!-- Submit Button -->
+
             <button
                 type="submit"
                 class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 my-4"
@@ -93,7 +93,3 @@ function submitForm() {
     });
 }
 </script>
-
-<style scoped>
-/* Add your custom styles here */
-</style>

@@ -38,7 +38,7 @@
                 />
             </div>
 
-            <!-- Submit Button -->
+            
             <button
                 type="submit"
                 class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 my-10"
@@ -52,7 +52,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { useForm } from '@inertiajs/vue3';
-import { ref } from 'vue'; // Import ref from Vue 3 Composition API
+import { ref } from 'vue'; 
 
 const space = useForm({
     name: '',
@@ -74,20 +74,20 @@ function removePet(index) {
 }
 
 function submitForm() {
-    // Assuming you have Axios installed, if not install it via npm or yarn
+    
     space
         .post(route('spaces.store'))
         .then((response) => {
             console.log('Form submitted successfully!', response.data);
-            // Handle success, e.g., show a success message
+            
         })
         .catch((error) => {
             console.error('Error submitting form:', error);
-            // Handle error, e.g., show an error message
+            
         });
 }
 </script>
 
 <style scoped>
-/* Add your custom styles here */
+
 </style>

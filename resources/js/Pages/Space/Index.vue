@@ -20,7 +20,7 @@ const props = defineProps({
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4"
                 >
-                    <!-- Statistic Cards -->
+
                     <div class="bg-white rounded-lg shadow-md p-4">
                         <h2 class="text-lg font-semibold mb-2">
                             Total Pet Space
@@ -45,7 +45,7 @@ const props = defineProps({
                     </div>
                 </div>
             </div>
-            <SpaceList :spaces="spaces" default-display='block'/>
+            <SpaceList :spaces="spaces" default-display='block-first'/>
         </div>
     </AuthenticatedLayout>
 </template>

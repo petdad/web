@@ -18,7 +18,7 @@ const props = defineProps({
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4"
                 >
-                    <!-- Statistic Cards -->
+                    
                     <div class="bg-white rounded-lg shadow-md p-4">
                         <h2 class="text-lg font-semibold mb-2">Total Controllers</h2>
                         <p class="text-3xl font-bold text-gray-900">

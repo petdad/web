@@ -18,11 +18,12 @@ class PetFactory extends Factory
      */
     public function definition(): array
     {
+        $breed = getRandomAnimal();
         return [
             'space_id' => mt_rand(1, 20),
-            'breed' => getRandomAnimal(),
+            'breed' => $breed,
             'name' => $this->faker->firstName,
-            'species' => getRandomAnimal(), // Example species
+            'species' => $breed, // Example species
             'dob' => $this->faker->date(),
             'health_state' => 'healthy',
             'color' => $this->faker->safeColorName,

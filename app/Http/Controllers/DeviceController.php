@@ -18,7 +18,7 @@ class DeviceController extends Controller
      */
     public function index(Request $request): Response
     {
-        return Inertia::render('Controllers/Index',[
+        return Inertia::render('Vet/Index',[
             "total_wireless" => ControllerDevice::where('user_id', Auth::id())->count(),
             "total_wired" => ControllerDevice::where('user_id', Auth::id())->count(),
         ]);

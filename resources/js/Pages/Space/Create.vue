@@ -8,7 +8,7 @@
                 Space Information
             </h2>
 
-            <!-- Space Name -->
+
             <div class="mb-4">
                 <label
                     for="name"
@@ -24,7 +24,7 @@
                 />
             </div>
 
-            <!-- Is Active -->
+
             <div class="mb-4">
                 <label
                     for="is_active"
@@ -42,7 +42,7 @@
                 </select>
             </div>
 
-            <!-- Submit Button -->
+
             <button
                 type="submit"
                 class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 my-10"
@@ -56,7 +56,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { router, useForm, usePage } from '@inertiajs/vue3';
-import { ref } from 'vue'; // Import ref from Vue 3 Composition API
+import { ref } from 'vue';
 
 const space = useForm({
     name: '',
@@ -78,7 +78,7 @@ function removePet(index) {
 }
 
 function submitForm() {
-    // Assuming you have Axios installed, if not install it via npm or yarn
+
     if(usePage().props.is_demo){
         alert('Disabled for demo version, Contact for business query at email: juborajnaofel@gmail.com');
         return;
@@ -92,6 +92,3 @@ function submitForm() {
 }
 </script>
 
-<style scoped>
-/* Add your custom styles here */
-</style>

@@ -2,7 +2,8 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import SpaceList from '@/Components/SpaceList.vue';
 import { Head } from '@inertiajs/vue3';
-import Overview from '@/Components/Overview.vue';
+import ModalOverview from '@/Components/ModalOverview.vue';
+import { ref } from 'vue';
 
 const props = defineProps({
     total_pet_space: Number,
@@ -12,6 +13,8 @@ const props = defineProps({
     spaces:Array
 });
 
+
+
 </script>
 
 <template>
@@ -19,12 +22,13 @@ const props = defineProps({
 
     <AuthenticatedLayout>
         <div class="">
-            <Overview/>
+
+            <ModalOverview/>
             <div class="max-w-full sm:px-6 lg:px-8">
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4"
                 >
-                    <!-- Statistic Cards -->
+
                     <div class="bg-white rounded-lg shadow-md p-4">
                         <h2 class="text-lg font-semibold mb-2">
                             Total Pet Space
@@ -56,15 +60,8 @@ const props = defineProps({
                         </p>
                     </div>
 
-                    <!-- Charts -->
-                    <!-- <div
-                        class="col-span-1 md:col-span-2 lg:col-span-4 bg-white rounded-lg shadow-md p-4"
-                    >
-                        <h2 class="text-lg font-semibold mb-4">
-                            Analytics Chart
-                        </h2>
-                        <div class="w-full h-64 bg-gray-200"></div>
-                    </div> -->
+
+
                 </div>
             </div>
             <SpaceList :spaces="spaces" default-display='block'/>
