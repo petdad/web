@@ -20,8 +20,6 @@
     <p class="text-gray-600 leading-relaxed">
         Enjoy secure and easy access to monitor and care for your pets from anywhere with our intuitive authentication system. Whether you're at home or traveling, stay connected and informed about your pets' activities and health status.
     </p>
-    <img src="./readme assets/login.jpg" alt="Login screenshot">
-    <img src="./readme assets/register.jpg" alt="Register screenshot">
 </section>
 
 <section>
